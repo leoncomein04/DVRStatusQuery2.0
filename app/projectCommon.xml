@@ -1,0 +1,15 @@
+	<logFile path="..\app\logs\" name="%datetime%_%unique%_Log.txt"/>
+	<tempFiles path="..\app\logs\" name="%datetime%_%unique%_Temp.txt" />
+
+	<dbNDS2>
+		<dbserver>67.214.100.187,1898</dbserver>
+		<dbname>NDS2</dbname>
+		<dblogin>NDS2User</dblogin>
+		<dbpassword>NDS2UserPass</dbpassword>
+	</dbNDS2>
+	<dbRS>
+		<dbserver>67.214.100.187,1898</dbserver>
+		<dbname>RS</dbname>
+		<dblogin>NDS2User</dblogin>
+		<dbpassword>NDS2UserPass</dbpassword>
+	</dbRS>

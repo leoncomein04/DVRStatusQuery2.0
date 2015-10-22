@@ -1,0 +1,29 @@
+<driver>
+        <logFile path="%basePath%app\logs\" name="%datetime%_%unique%_Log.txt"/>
+        <tempFiles path="%basePath%app\temp\" name="%datetime%_%unique%_Temp.txt" />
+        <inputHandlerBase>inHandlerBase.php</inputHandlerBase>
+	<outputHandlerBase>outHandlerBase.php</outputHandlerBase>
+        <handlerFiles path="%basePath%handlers\">
+          <inputHandler>inDVRStatusQuery.php</inputHandler>
+          <outputHandler>outDVRStatusQuery.php</outputHandler>
+        </handlerFiles>
+        <smtpServer>192.168.45.19</smtpServer>
+        <smtpPort>25</smtpPort>
+        <smtpAuthId></smtpAuthId>
+        <smtpAuthPassword></smtpAuthPassword>
+        <smtpAuthIdNU>noel@newsdataservice.com</smtpAuthIdNU>
+        <smtpAuthPasswordNU>^~9111DnUq6)</smtpAuthPasswordNU>
+        <parameters>
+          <dbserver>192.168.45.17,1898</dbserver>
+          <dbname>NDS2</dbname>
+          <dblogin>NDS2Read</dblogin>
+          <dbpassword>NDS2ReadPass</dbpassword>
+          <procname>EXECUTE dbo.ndssp_DVRStatusQueryServer</procname>
+          <outfilename path="%basePath%app\output\">%datetime%_%unique%_Out.txt</outfilename>
+          <emailSubject>DVR Not Responding: %Name% %Address% %Port% %FilePath% %Market%</emailSubject>
+          <emailBody>This is an automated message meant to notify you of a possible problem. There is no need to reply.&lt;br&gt;&lt;br&gt;The DVR did not respond to a status test request.&lt;br&gt;&lt;br&gt;Address=%Address%&lt;br&gt;Port=%Port%&lt;br&gt;Path=%FilePath%&lt;br&gt;Market=%Market%&lt;br&gt;Error=%error%&lt;br&gt;&lt;br&gt;&lt;a href=&quot;%webAddress%&quot; target=&quot;_blank&quot;&gt;%webAddress%&lt;/a&gt;</emailBody>
+          <emailBCC_test>dfunk@newsdataservice.com,kanikis@tds.net,kstewart@QuickScan.net</emailBCC_test>
+          <emailBCC>leoncomein_04@yahoo.com</emailBCC>
+          <emailFrom>admin@newsdataservice.com</emailFrom>
+        </parameters>
+</driver>
